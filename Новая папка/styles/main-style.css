@@ -1,0 +1,365 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Heebo";
+  src: url(../fonts/Heebo.ttf);
+}
+@font-face {
+  font-family: "Manrpe";
+  src: url(../fonts/Manrope.ttf);
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url(../fonts/helvetica_regular.otf);
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url(../fonts/Rajdhani-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Colors */
+/* Mixin */
+/* Fonts */
+:root {
+  --kitan: "Kitan", sans-serif;
+  --heebo: "Heebo", sans-serif;
+  --manrot: "Manroe", sans-serif;
+  --helvetica: "Helvetica", sans-serif;
+  --rajdhani: "Rajdhani", sans-serif;
+}
+
+/* Fonts-size */
+:root {
+  --font30: 1.875rem;
+  --font15: 0.9375rem;
+  --font16: 1rem;
+  --font18: 1.125rem;
+  --font60: 3.75rem;
+  --font20: 1.25rem;
+  --font25: 1.5625rem;
+}
+
+.container {
+  width: 1300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+.title h1 {
+  font-size: var(--font25);
+  font-family: var(--helvetica);
+  font-weight: 400;
+  color: #fff;
+  margin-top: 27px;
+}
+.title .container_progress {
+  position: absolute;
+  right: 22px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 11px;
+}
+.title .container_progress p {
+  font-family: var(--rajdhani);
+  font-size: var(--font20);
+  font-size: 400;
+  color: #43F272;
+}
+.title .container_progress .green_border {
+  height: 8px;
+  width: 311px;
+  border: 1px #43F272 solid;
+}
+.title .container_progress .green_border .green_value {
+  margin: 2px 3px;
+  height: 2px;
+  width: 32px;
+  background-color: #43F272;
+}
+
+.horisontal_border {
+  margin-top: 9px;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #170D1C;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container {
+  width: 1300px;
+  height: 108px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container .logo_text {
+  z-index: 2;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  font-family: var(--kitan);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--font30);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+header .container nav ul {
+  display: flex;
+  gap: 50px;
+}
+header .container nav ul li {
+  z-index: 2;
+  list-style: none;
+  font-size: var(--font16);
+  font-family: var(--heebo);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+header .container nav ul li:hover {
+  scale: 1.07;
+}
+header .container button {
+  background-color: rgba(67, 242, 114, 0.1);
+  padding: 11px 27px;
+  border: 1px solid #14F195;
+  border-radius: 10px;
+  position: absolute;
+  right: 0;
+  color: #43F272;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+  font-family: var(--manrot);
+  font-size: var(--font18);
+  font-weight: regular;
+}
+header .container button:hover {
+  scale: 1.03;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .hero-block {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 70px;
+  padding: 216px 0 326.6px 0;
+}
+main .hero-block h1 {
+  width: 765px;
+  font-family: var(--helvetica);
+  font-size: var(--font60);
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  text-align: end;
+  color: #fff;
+  z-index: 2;
+}
+main .hero-block h1 span {
+  background: linear-gradient(49deg, #43F272 0%, #ffde00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .hero-block button {
+  z-index: 2;
+  position: relative;
+  width: 350px;
+  height: 50px;
+  outline: none;
+  border: none;
+  font-family: var(--manrot);
+  font-size: var(--font20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/background/hero_block_button.svg);
+  background-position: center;
+  background-color: #170D1C;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+main .hero-block button:before {
+  content: "🡺";
+  position: absolute;
+  right: 45px;
+  top: 11px;
+}
+main .hero-block button:hover {
+  scale: 1.08;
+}
+main .hero-block div {
+  z-index: 1;
+  width: 1344px;
+  height: 929px;
+  position: absolute;
+  top: -108px;
+  right: 149px;
+  background-image: url(../img/background/header_bg.png);
+}
+main .img_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .img_block div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .img_block div .dino_bg {
+  width: 100%;
+  margin-bottom: 100px;
+}
+main .img_block .img-blocks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+main .img_block .img-blocks .five-img {
+  display: flex;
+  gap: 30px;
+}
+main .img_block .img-blocks .four-img {
+  display: flex;
+  gap: 30px;
+}
+main .team-block {
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .team-block .people_team_container {
+  margin-top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+  grid-gap: 20px;
+}
+main .team-block .people_team_container .teammate {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+main .team-block .people_team_container .teammate .container_teammate img {
+  border-radius: 100%;
+}
+main .team-block .people_team_container .teammate .teammate_text .name {
+  text-align: center;
+  font-size: var(--font25);
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+main .team-block .people_team_container .teammate .teammate_text .post {
+  margin-top: 5px;
+  text-align: center;
+  font-size: var(--font15);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  background: linear-gradient(49deg, #ffde00 0%, #43F272 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .team-block .bg_border {
+  position: absolute;
+  top: 55px;
+  left: -230px;
+}
+main .opportunities-block {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .opportunities-block .small_opport {
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 310px 310px 310px 310px;
+  grid-gap: 20px;
+}
+main .opportunities-block .small_opport .small_opport_item {
+  background: url(../img/background/bg_opport.png);
+  height: 360px;
+  padding: 30px 22px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 41.5px;
+}
+main .opportunities-block .small_opport .small_opport_item:nth-child(even) {
+  background: url(../img/background/bg_opport_sec.png);
+}
+main .opportunities-block .small_opport .small_opport_item .opport_text {
+  width: 265px;
+}
+main .opportunities-block .small_opport .small_opport_item .opport_text h2 {
+  font-weight: 600;
+  font-size: var(--font20);
+  font-family: var(--rajdhani);
+  color: #43F272;
+  text-transform: uppercase;
+}
+main .opportunities-block .small_opport .small_opport_item .opport_text .desc_opport {
+  margin-top: 13px;
+  font-family: var(--manrot);
+  font-size: var(--font15);
+  font-weight: 400;
+  letter-spacing: 0.48px;
+  color: #fff;
+}
+main .opportunities-block .small_opport .bg_round {
+  position: absolute;
+  right: -725px;
+  top: -79px;
+}/*# sourceMappingURL=main-style.css.map */
