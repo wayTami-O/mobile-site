@@ -185,6 +185,10 @@ $bg_opport_big_item: #2e2532;
     background-color: $greenColor;
     opacity: .1;
     cursor: pointer;
+    transition: all 100ms ease-in-out;
+    &:hover {
+        scale: 1.1;
+    }
 }
 
 .sec_price {

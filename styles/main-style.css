@@ -149,6 +149,10 @@ img {
   background-color: #43F272;
   opacity: 0.1;
   cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+.one_price_item:hover {
+  scale: 1.1;
 }
 
 .sec_price {
